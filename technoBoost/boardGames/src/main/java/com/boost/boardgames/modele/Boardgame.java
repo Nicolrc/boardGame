@@ -16,11 +16,15 @@ public class Boardgame {
     @Column(name = "game_nom")
     private String GameNom;
 
+    @Getter
+    @Setter
     @Column(name = "joueur_min")
-    private Integer JoueurMin;
+    private Integer joueurMin;
 
+    @Getter
+    @Setter
     @Column(name = "joueur_max")
-    private Integer JoueurMax;
+    private Integer joueurMax;
 
     @ManyToOne
     @JoinColumn(name = "id_categorie")
@@ -30,10 +34,10 @@ public class Boardgame {
 
     }
 
-    public Boardgame(String GameNom, Integer JoueurMin, Integer JoueurMax, Categorie Categorie) {
+    public Boardgame(String GameNom, Integer joueurMin, Integer joueurMax, Categorie Categorie) {
         this.GameNom = GameNom;
-        this.JoueurMin = JoueurMin;
-        this.JoueurMax = JoueurMax;
+        this.joueurMin = joueurMin;
+        this.joueurMax = joueurMax;
         this.Categorie = Categorie;
     }
 
